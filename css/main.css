@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background-color: #060606;
+  color: white;
+  font-family: 'Unbounded', cursive;
+  overflow: hidden;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+header {
+  padding: 16px;
+}
+
+.track-list {
+  padding: 0 16px;
+}
+
+.track-list__track {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.track-list__track:hover {
+  color: #29fefe;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.track-list__track-highlight {
+  color: #29fefe;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.dashboard {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: auto;
+  position: fixed;
+  bottom: 100px;
+}
+
+.dashboard__song-controls {
+  padding-left: 16px;
+  font-size: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard__song-controls:nth-child(odd) {
+  gap: 1.6rem;
+  font-size: 3rem;
+  color: #7a7a7a;
+}
+
+.dashboard__song-controls:nth-child(odd):hover {
+  color: azure;
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.dashboard__song-info {
+  padding-right: 16px;
+  position: absolute;
+}
+
+.dashboard__info__track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 16px 16px 0;
+  margin: 3rem 0 -2rem 0;
+  font-size: 40px;
+}
+
+.dashboard__visuals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 16px;
+  gap: 1.5rem;
+}
+
+.dashboard__visuals span {
+  border: .5px solid white;
+  border-radius: 19px;
+  padding: 10px 14px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  position: fixed;
+  bottom: 14px;
+  width: 100%;
+}
+
+footer p {
+  padding: 16px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer p:nth-child(1) {
+  width: 50%;
+  max-width: 40rem;
+}
+
+footer p:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: .2rem;
+}
+/*# sourceMappingURL=main.css.map */

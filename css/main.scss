@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// mixins
+@mixin flex-layout($font-size, $just:space-between) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $just;
+  font-size: $font-size;
+  @content;
+}
+
+body {
+  background-color: rgb(6, 6, 6);
+  color: white;
+  font-family: 'Unbounded', cursive;
+  overflow: hidden;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    transition: .5s ease-in-out;
+  }
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.nav-items {
+  @include flex-layout(14px) {
+    margin-bottom: 20px;
+  }
+}
+
+header {
+  padding: 16px;
+}
+
+.track-list {
+  padding: 0 16px;
+
+  &__track {
+    z-index: 3;
+
+    @include flex-layout(14px) {
+      font-weight: 300;
+    }
+
+    &:hover {
+      color: rgb(41, 254, 254);
+      transition: all .2s;
+    }
+  }
+}
+
+.track-list__track-highlight {
+  color: rgb(41, 254, 254);
+  transition: all .2s;
+}
+
+
+.dashboard {
+  width: 100%;
+
+  @include flex-layout(18px) {
+    font-weight: 300;
+    margin-top: auto;
+    position: fixed;
+
+    bottom: 100px
+  }
+
+  &__song-controls {
+    padding-left: 16px;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: row;
+    color: rgb(255, 255, 255);
+    align-items: center;
+
+
+    &:nth-child(odd) {
+      gap: 1.6rem;
+      font-size: 3rem;
+
+      color: rgb(122, 122, 122);
+
+      &:hover {
+        color: azure;
+        transition: .25s ease-in-out;
+      }
+    }
+  }
+
+  &__song-info {
+    padding-right: 16px;
+    position: absolute;
+  }
+
+  &__info__track {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 0 16px 16px 0;
+    margin: 3rem 0 -2rem 0;
+    font-size: 40px;
+  }
+
+  &__visuals {
+    @include flex-layout(14px) {
+      justify-content: flex-end;
+      padding-right: 16px;
+      gap: 1.5rem;
+    }
+
+    span {
+      border: .5px solid white;
+      border-radius: 19px;
+      padding: 10px 14px;
+    }
+  }
+}
+
+footer {
+
+  @include flex-layout(14px, );
+
+  p {
+    padding: 16px;
+    align-items: flex-end;
+
+    &:nth-child(1) {
+      width: 50%;
+      max-width: 40rem;
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      justify-content: flex-end;
+      gap: .2rem;
+    }
+  }
+
+
+  position: fixed;
+  bottom: 14px;
+  width: 100%;
+}
